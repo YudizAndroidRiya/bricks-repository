@@ -1,4 +1,4 @@
-Here's a README file for your bricks repository:
+Here’s the updated README file with the initialization steps for Mason and instructions to globally activate Mason CLI:
 
 ---
 
@@ -41,11 +41,23 @@ This repository provides reusable templates for Flutter projects using the Mason
 
 ### Prerequisites
 
-1. Install [Mason CLI](https://docs.brickhub.dev/getting-started):
+1. **Install Mason CLI**:
+   Install Mason CLI globally to manage your bricks:
    ```bash
    dart pub global activate mason_cli
    ```
-2. Clone this repository or reference it directly in your `mason.yaml` file.
+
+2. **Initialize Mason in Your Project**:
+   Before using bricks, initialize Mason in your Flutter project:
+   ```bash
+   mason init
+   ```
+
+   This will generate a `mason.yaml` file in your project directory, where you can register bricks.
+
+3. Clone this repository or reference it directly in your `mason.yaml` file.
+
+---
 
 ### Cloning the Repository
 
@@ -66,10 +78,12 @@ Add the bricks to your project by updating your `mason.yaml` file. You can eithe
 #### Using Relative Path
 ```yaml
 bricks:
-  add_string:
-    path: ./bricks/add_string
   feature:
-    path: ./bricks/feature
+    path: bricks-repository/feature
+  add_string:
+    path: bricks-repository/add_string
+  update_settings:
+    path: bricks-repository/update_settings
 ```
 
 #### Using Git URL
@@ -83,6 +97,14 @@ bricks:
     git:
       url: https://github.com/YudizAndroidRiya/bricks-repository.git
       path: feature
+```
+
+### Installing the Bricks
+
+After updating your `mason.yaml` file, run the following command to install the bricks:
+
+```bash
+mason get
 ```
 
 ### Running the Bricks
@@ -116,3 +138,7 @@ Contributions are welcome! If you'd like to contribute to this repository, pleas
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+This README now includes instructions for initializing Mason in your project and globally activating Mason CLI. Let me know if further adjustments are needed!
