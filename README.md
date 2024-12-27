@@ -52,7 +52,7 @@ This repository provides reusable templates for Flutter projects using the Mason
 To use the bricks in your project, clone this repository:
 
 ```bash
-git clone https://github.com/<your-username>/bricks-repository.git
+git clone https://github.com/YudizAndroidRiya/bricks-repository.git 
 ```
 
 ---
@@ -77,11 +77,11 @@ bricks:
 bricks:
   add_string:
     git:
-      url: https://github.com/<your-username>/bricks-repository.git
+      url: https://github.com/YudizAndroidRiya/bricks-repository.git
       path: add_string
   feature:
     git:
-      url: https://github.com/<your-username>/bricks-repository.git
+      url: https://github.com/YudizAndroidRiya/bricks-repository.git
       path: feature
 ```
 
