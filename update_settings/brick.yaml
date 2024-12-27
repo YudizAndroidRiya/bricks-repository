@@ -1,0 +1,15 @@
+name: update_settings
+description: A brick to append `dart.analysisExcludedFolders` to `settings.json`.
+version: 0.1.0+1
+environment:
+  mason: ">=0.1.0-dev.47 <0.1.0"
+
+vars:
+  project_path:
+    type: string
+    description: The base path to the project directory.
+    prompt: Enter the base project path
+  existing_exclusions:
+    type: list
+    description: Existing folders to exclude from analysis.
+    default: []
